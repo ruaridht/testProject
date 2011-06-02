@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "Person.h"
 #import <ShortcutRecorder/ShortcutRecorder.h>
+#import "NSString+Crop.h"
 
 @interface testAppDelegate : NSObject <NSApplicationDelegate> {
     NSWindow *window;
@@ -21,6 +22,9 @@
 	NSMutableArray *people;
 	
 	IBOutlet SRRecorderControl *theControl;
+	
+	NSString *blah;
+	NSArray *c12data;
 }
 
 @property (assign) IBOutlet NSWindow *window;

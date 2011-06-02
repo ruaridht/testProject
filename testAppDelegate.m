@@ -20,16 +20,18 @@
 	if (![super init])
 		return nil;
 	
+	
 	easy = @"easy";
 	newguy = [[Person alloc] initWithName:@"John" old:@"49"];
 	otherguy = [[Person alloc] initWithName:@"Al" old:@"50"];
 	[people addObject:newguy];
 	[people addObject:otherguy];
 	currentPerson = newguy;
-	
+	/*
 	theControl = [[[SRRecorderControl alloc] init] retain];
 	KeyCombo combo1 = { (NSShiftKeyMask | NSAlternateKeyMask), (CGKeyCode)21 };
 	[theControl setKeyCombo:combo1];
+	*/
 	
 	return self;
 }
@@ -38,8 +40,12 @@
 {	
 	SDGlobalShortcutsController *shortcutsController = [SDGlobalShortcutsController sharedShortcutsController];
 	
-	//[self loadPeople];
+	[shortcutsController addShortcutFromDefaultsKey:@"testhotkeys"
+										withControl:theControl
+											 target:self
+										   selector:@selector(theTest)];
 	
+	//[self loadPeople];
 	/*
 	for (Person *p in people) {
 		NSLog(@"Adding shortcut for %@", [p name]);
@@ -48,7 +54,12 @@
 												 target:p
 											   selector:@selector(testMe)];
 	}
-	 */
+	*/
+	/*
+	KeyCombo combo1 = { (NSShiftKeyMask | NSAlternateKeyMask), (CGKeyCode)21 };
+	[theControl setKeyCombo:combo1];
+	*/
+	//theControl = [newguy srhotkey];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
@@ -89,7 +100,27 @@
 
 - (IBAction)manualTest:(id)sender
 {
-	[self theTest];
+	//[self theTest];
+	
+	//NSString *bundleLoc = [[NSBundle mainBundle] bundleURL];
+	
+	NSString *path = @"/Users/Northern/DockDesktop/Temp Desktop/Me/test/build/Debug/test.app/Contents/Resources/Courses12Data.js";//[NSString stringWithFormat:@"%@%@", bundleLoc,@"Courses12Data.js"];
+	
+	//NSString *thePath = [NSString stringWithFormat:@"%@%@", bundleLoc,path];
+	
+	blah = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+	c12data = [blah componentsSeparatedByString:@"\n"];
+	//NSString *newString = [blah cropFrom:@"Courses" to:@"\n"];
+	
+	NSLog(@"The Path:");
+	//NSLog(@"%@",newString);
+	
+	//NSLog(@"%@",blah);
+	
+	NSLog(@"The first x lines:");
+	for (int i=0;i<10;i++) {
+		NSLog(@"%@", [c12data objectAtIndex:i]);
+	}
 }
 
 - (void)theTest
@@ -102,9 +133,9 @@
 	//NSNumber *modifierFlags = [theControl objectForKey:@"modifierFlags"];
 	//NSLog(@"The combo: %i and %i", [keyCode intValue], [modifierFlags intValue]);
 	
-	[self willChangeValueForKey:@"theControl"];
+	//[self willChangeValueForKey:@"theControl"];
 	[theControl setKeyCombo:[currentPerson.srhotkey keyCombo]];
-	[self didChangeValueForKey:@"theControl"];
+	//[self didChangeValueForKey:@"theControl"];
 }
 
 @end

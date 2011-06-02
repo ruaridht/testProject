@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		256AC3DA0F4B6AC300CF3369 /* testAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* testAppDelegate.m */; };
+		5519383F1327F38E000BF3F2 /* NSString+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = 5519383D1327F38E000BF3F2 /* NSString+Crop.m */; };
+		551938411327F3D5000BF3F2 /* Courses12Data.js in Sources */ = {isa = PBXBuildFile; fileRef = 551938401327F3D5000BF3F2 /* Courses12Data.js */; };
+		5519387F1327F530000BF3F2 /* Courses12Data.js in Resources */ = {isa = PBXBuildFile; fileRef = 551938401327F3D5000BF3F2 /* Courses12Data.js */; };
 		5538D0FD12FDA9BC00AD9A99 /* ShortcutRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5538D0FC12FDA9BC00AD9A99 /* ShortcutRecorder.framework */; };
 		5538D10912FDA9D100AD9A99 /* ShortcutRecorder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5538D0FC12FDA9BC00AD9A99 /* ShortcutRecorder.framework */; };
 		5538D2AB12FDBEFC00AD9A99 /* SDGlobalShortcuts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5538D2AA12FDBEFC00AD9A99 /* SDGlobalShortcuts.framework */; };
@@ -44,6 +47,9 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		5519383D1327F38E000BF3F2 /* NSString+Crop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Crop.m"; sourceTree = "<group>"; };
+		5519383E1327F38E000BF3F2 /* NSString+Crop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Crop.h"; sourceTree = "<group>"; };
+		551938401327F3D5000BF3F2 /* Courses12Data.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Courses12Data.js; sourceTree = "<group>"; };
 		5538D0FC12FDA9BC00AD9A99 /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShortcutRecorder.framework; sourceTree = "<group>"; };
 		5538D2AA12FDBEFC00AD9A99 /* SDGlobalShortcuts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDGlobalShortcuts.framework; sourceTree = "<group>"; };
 		55BDB07912FD8141006BC2D7 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -120,6 +126,9 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				551938401327F3D5000BF3F2 /* Courses12Data.js */,
+				5519383D1327F38E000BF3F2 /* NSString+Crop.m */,
+				5519383E1327F38E000BF3F2 /* NSString+Crop.h */,
 				256AC3F00F4B6AF500CF3369 /* test_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -196,6 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5519387F1327F530000BF3F2 /* Courses12Data.js in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 			);
@@ -211,6 +221,8 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* testAppDelegate.m in Sources */,
 				55BDB07B12FD8141006BC2D7 /* Person.m in Sources */,
+				5519383F1327F38E000BF3F2 /* NSString+Crop.m in Sources */,
+				551938411327F3D5000BF3F2 /* Courses12Data.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
